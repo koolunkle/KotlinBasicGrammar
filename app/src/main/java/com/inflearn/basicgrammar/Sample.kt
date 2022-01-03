@@ -11,7 +11,8 @@ fun main() {
     println("is this true? ${1 == 0}")
     println("this is 2\$a")
 
-    forAndWhile()
+    nullCheck()
+    ignoreNulls("")
 
 }
 
@@ -104,6 +105,39 @@ fun forAndWhile() {
     while (index < 10) {
         println("current index : ${index}")
         index++
+    }
+
+}
+
+//    7. Nullable and NonNull
+
+fun nullCheck() {
+
+    var name = "jungi"
+    var nameInUpperCase = name.toUpperCase()
+
+    var nullName: String? = null
+    var nullNameInUpperCase = nullName?.toUpperCase()
+
+//    ?:
+
+    val lastName: String? = "Kim"
+    val fullName = name + " " + (lastName ?: "No last name")
+    var mLastName = lastName ?: throw IllegalArgumentException("No last name")
+    println(fullName)
+
+}
+
+//    !!
+
+fun ignoreNulls(str: String?) {
+
+    val mNotNull: String = str!!
+    val upper = mNotNull.toUpperCase()
+
+    val email: String? = "gugi329@daum.net"
+    email?.let {
+        println("my email is ${email}")
     }
 
 }
