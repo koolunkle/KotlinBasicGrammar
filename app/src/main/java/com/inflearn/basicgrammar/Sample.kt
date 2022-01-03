@@ -50,6 +50,24 @@ fun checkNum(score: Int) {
 
 }
 
+//    5. Array and List
+
+fun array() {
+
+    val array = arrayOf(1, 2, 3)
+    array[0] = 3
+    val list = listOf(1, 2, 3)
+
+    val array2 = arrayOf(1, "d", 3.4f)
+    val list2 = listOf(1, "d", 11L)
+    var result = list.get(0)
+
+    var arrayList = arrayListOf<Int>()
+    arrayList.add(10)
+    arrayList.add(20)
+
+}
+
 //    1. 함수
 
 fun helloWorld() {
